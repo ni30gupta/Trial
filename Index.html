@@ -1,0 +1,559 @@
+<!-- C:\Users\zeus\Downloads\dom-java-script-files\Lesson19.html Saturday, October 10, 2015 2:23 PM -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>DOM Learning Course</title>
+    <link rel="stylesheet" href="
+http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="
+https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+
+
+</head>
+
+<body>
+    <nav role="navigation" class="navbar navbar-default">
+        <div class="navbar-header">
+            <button id="b1" type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span
+                    class="icon-bar"></span> <span class="icon-bar"></span> </button>
+            <a href="#" class="navbar-brand">Home Page</a> </div>
+        <div id="navbarCollapse" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <div id="topSection" class="row">
+            <p> This is going to be the main page of our website.<br>
+                This is just a new <span class="first">span</span> <span class="first">This is just a new
+                    div</span> </p>
+        </div>
+        <div class="row">
+            <div id="output">There is no output yet!!! </div>
+        </div>
+        <div class="row">
+            <p id="buttonOutput"> Buttons</p>
+            <button id="btnA" class="btn">Button A</button>
+            <button id="btnB" class="btn">Button B</button>
+            <button id="btnC" class="btn">Button C</button>
+        </div>
+        <div class="row">
+            <p> Lists</p>
+            <ul id="theList">
+                <li id="listA" class="listClass">List A</li>
+                <li id="listB" class="listClass">List B</li>
+                <li id="listC" class="listClass">List C</li>
+                <li id="listD" class="listClass">List D</li>
+                <li id="listE" class="listClass">List E</li>
+            </ul>
+        </div>
+        <div class="row">
+            <p> Form</p>
+
+            <form>
+                Name :
+                <input alt="xyzz" name="firstName" type="text" id="firstName" value="firstName value">
+                <br>
+                Email :
+                <input name="email" type="email" id="email">
+                <br>
+                <input name="submitButton" type="submit" id="submitButton">
+            </form>
+        </div>
+        <div class="row">
+            <p> Images Links</p>
+            <p>We had to place some links to <a id="website" href="http://www.discoveryvip.com"> websites </a> </p>
+            <p> Update this code to improve on the site experience.
+                This is just a second <span class="second">span</span> <span class="second">This is
+                    another new div</span> In this section we added some images</p>
+            <!-- <p> <img id="myImage" src="http://lorempixel.com/400/200/" alt="temp image"> </p> -->
+        </div>
+        <div id="footer" class="row">
+            <div> Copyright © discoveryvip.com </div>
+        </div>
+    </div>
+
+
+    <canvas height="300px" , width="=500px" ,color="red">
+
+    </canvas>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    <script>
+        /*
+*********
+Challenge
+*********
+*/
+
+        
+
+
+
+        /*
+
+        making object from class, pass value and use constructor.
+        Note: if we pass a argument through method or function that should be written without this operator.
+
+        // class Student{
+        //     constructor(name, stndrd, age,love ){
+        //         this.name = name;
+        //         this.stndrd = stndrd;
+        //         this.age = age;
+        //         this.love = love;
+        //     }
+
+        //     data  (love){
+
+        //         console.log(`this is ${this.name}, studies in ${this.stndrd}, age is${this.age}, and he loves ${this.love}`);
+        //     }
+
+        //     sum (a,b){
+        //         return a+b;
+        //     }
+            
+        // }
+
+        // let student1 = new Student("nitish", 12, 25, "puchhu");
+
+        // student1.data("babita");
+        // console.log(student1.sum(5,8));
+
+        */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        /*
+        Program for scrumble a word by selecting a random word from a given array.
+
+
+                let sWords = ['sachin', 'virat', 'dhoni', 'raina', 'zaheer', 'irfan', 'ganguly', 'dravid']
+
+                const createWord = () => {
+                    let random = Math.floor(Math.random() * sWords.length)
+
+                    let newTempSwords = sWords[random].toUpperCase();
+                    return newTempSwords;
+
+                }
+
+                
+                const scrambleWord = (name) => {
+                    let data = name.split("");
+
+                    let count = data.length;
+                    let tempWord = [];
+                    let newIndex = [];
+                    let Sword ;
+
+                    while (newIndex.length < count) {
+                        let randomNo = Math.floor(Math.random() * (data.length));
+                        if (newIndex.indexOf(randomNo) === -1) {
+                            newIndex.push(randomNo);
+                        }
+                    }
+
+                    newIndex.forEach(function (item) {
+                        tempWord.push(data[item]);
+                        Sword = tempWord.join("")
+                    })
+
+
+                    // for(let x of newIndex)
+                    // {
+                    //     tempWord.push(data[x]);
+                    //     Sword = tempWord.join("") 
+                        
+                    // }
+
+                    console.log(Sword);
+                    // console.log(data);
+                }
+
+
+            scrambleWord(createWord());
+
+        */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // const thapa = {
+        //     name : "Nitish Gupta",
+        //     sum : function(){
+        //         console.log(this.name);
+        //         var add = 2+2;
+        //         console.log('sum is '+ add );
+        //         console.log(this);
+
+        //         },
+        //         chiller : function (){
+        //             var name = 'nitish';
+        //             console.log('child method name is ' + name);
+        //             console.log(this);
+
+
+        //     }
+
+        // }
+
+        // console.log(thapa.sum());
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // var a = 'hello guys';
+
+        // function first(){
+        //     var b = 'how are you';
+        //     second();
+        //     function second (){
+        //         var c = 'my self nitish gupta';
+        //         console.log(a+b+c);
+        //     }
+        // }
+
+        // first();
+
+
+
+
+
+
+            var student = ['niti', 'bby', 'golu', 'rohit']
+
+            console.log(student)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // let outside = function () {
+        //     console.log("i am outer function" );
+
+        // }
+
+        // let das = "welcome"
+
+
+        // function a(){
+
+        //     outside();
+
+        //     console.log("i am function a " + das);
+        //     console.log(b());
+        //     console.log("i supposed to last");
+
+
+        // }
+
+        // function b(){
+        //     let val = "hellooo";
+        //     // console.log('I am in function B'  + val);
+
+        //     c();
+        //     function d(){
+        //         console.log("tryingg" + das + val);
+        //     }
+
+        //     console.log('after returning B');
+        //     d();
+        //     return val;
+        // }
+
+        // function c (){
+        //     console.log('I am in function C');
+
+        // }
+        // a();
+
+
+
+
+
+
+        // function countingInString(limit) {
+        //     let data = [];
+        //     for(let i = 0; i<=limit; i++){
+        //         data.push(i);
+
+        //     }
+
+        //     return data.toString();
+        // }
+
+
+        // console.log(countingInString(10));
+
+        // // let data = countingInString(9).replace("7", "4");
+
+        // for(let i=0; i<data.length; i++){
+        //     console.log(data[i]);
+        // }
+
+
+
+        // function createMultiplier(multiplier) {
+        //     return function(x){
+        //         return x*multiplier;
+        //     }
+        // }
+
+        // var xyz = createMultiplier(2);
+
+        // console.log(xyz(25));
+
+
+        // var greet = function(){
+        //     return "Hello";
+        // }
+
+        // function greeting(func, name) {
+
+        //     console.log(func() + name);
+        // }
+
+        // greeting(greet, "Nitish");
+
+
+
+        // function a(x){
+        //     return function b(y){
+        //         return x*y;
+        //     }
+        // }
+
+        // const double = a(2);
+        // const triple = a(3);
+
+        // console.log(triple(50))
+
+
+
+
+        /*   
+        Value of pi
+        let z = "3.";
+        let calc = 1;
+
+        for(let i = 0; i<20; i++){
+
+           
+        let y =7;
+
+           let division = Math.trunc((calc*10)/y);
+            let reminder = (calc*10)%y;
+        //    console.log(division);
+
+           calc =reminder;
+           
+         z= z.concat(division);
+
+        }
+
+        console.log(z);  
+
+        */
+
+        // console.log(`${coreResult}.${result}`);
+
+
+
+
+
+
+        // var button = document.getElementById("btnA");
+        // var website = document.getElementById("website");
+        // var output = document.getElementById("output")
+        // var count = 0;
+
+        // var blinky =   setInterval(function(){
+        //         output.style.color = output.style.color== "red"? "black": "red";
+        //     }, 100)
+
+        // button.addEventListener("click", ()=> console.log(this)) 
+
+
+
+        // website.addEventListener('click', function (e) {
+        //     count += 1;
+        //     console.log("click k bad" + count);
+        //     if (count < 3) {
+        //         e.preventDefault();
+        //     } 
+        //     else {
+        //         console.log("fire");
+        //         console.log("if k bad" + count);
+        //     }
+
+        //     console.log("last me" + count);
+
+        // })
+
+        // window.open("https://www.google.com", "hjgjh", "");
+        // console.log('bahara' + count);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // var photo = document.getElementById("myImage");
+
+        // var output = document.getElementById("output");
+
+        // photo.addEventListener("mouseover", function(){
+        //     output.innerHTML='You have eneterd on image';
+        //     output.style.backgroundColor="red"
+        // });
+
+        // photo.addEventListener("mouseout", function(e){
+        //     output.innerHTML="You Leave";
+        //     console.log(e);
+        //     output.style.backgroundColor="white";
+        // })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // console.log("name");
+        // var myOutput = document.getElementById("output");
+        // var myButton = document.getElementById("submitButton");
+        // var mail = document.getElementById("email");
+
+
+        // myButton.addEventListener("click", function(){
+        //     var val = document.getElementById("firstName").value;
+        //     var valmail = document.getElementById("email").value;
+
+        //     var re = /\S+@\S+/;
+
+        //         if(re.test(valmail)){
+        //             alert("good");
+
+        //         }
+        //         else{
+        //             alert("bad");
+        //         }
+        // })
+
+
+
+
+
+        // var btnClick = function(e) {
+        // var messageOut;
+        // var name = document.getElementById("firstName").value;
+        // console.log(name);
+
+        // var email = document.getElementById("email").value;
+        // if(name){messageOut="Hello "+name;}else{messageOut="Mysterious person I wonder why you don't add your name.";}
+        // myOutput.textContent = messageOut;
+        // };
+        // myButton.addEventListener("click", btnClick );
+    </script>
+
+
+
+</body>
+
+</html>
